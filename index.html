@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" href="images/products management.jpeg">
+  <title>Products Management System</title>
+</head>
+
+<body>
+  <div class="menu">
+    <ul>
+      <br>
+      <li class="profile">
+        <div class="image-box">
+          <img src="images/WhatsApp Image 2023-06-23 at 1.53.23 AM.jpeg" alt="profile img" />
+        </div>
+        <h2>mustafa</h2>
+      </li>
+      <br>
+      <li>
+        <a class="active" href="#">
+          <i class="fas fa-home"></i>
+          <p>Dasboard</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user-group"></i>
+          <p>Clients</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-chart-pie"></i>
+          <p>Statistics</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-pen"></i>
+          <p>Updates</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-star"></i>
+          <p>Notes</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-cog"></i>
+          <p>Setting</p>
+        </a>
+      </li>
+      <li class="log-out">
+        <a href="#">
+          <i class="fas fa-sign-out"></i>
+          <p>Log Out</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="title-info">
+      <b>Dashboard</b>
+      <i class="fas fa-chart-bar"></i>
+    </div>
+    <div class="data-info">
+      <div class="box">
+        <i class="fas fa-user"></i>
+        <div class="data">
+          <p>Clients of Day</p>
+          <span id="user-counter">100</span>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-pen"></i>
+        <div class="data">
+          <p>Updates</p>
+          <span id="updates-counter">65</span>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-cart-shopping"></i>
+        <div class="data">
+          <p>Soled Products</p>
+          <span id="products-counter">43</span>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa-solid fa-wallet" style="color: #ffffff;"></i>
+        <div class="data">
+          <p>Revenue</p>
+          <span>$1000</span>
+        </div>
+      </div>
+    </div>
+    <div class="title-info">
+      <b>System</b>
+      <i class="fas fa-table"></i>
+    </div>
+
+    <center>
+      <h1 class="form-title">Products Management System </h1>
+    </center>
+    <form action="">
+      <div class="formInputs">
+        <input type="text" placeholder="Product name" id="proname">
+        <input onkeyup="getTotal()" type="number" id="proprice" placeholder="Product price">
+        <input onkeyup="getTotal()" type="number" id="procount" placeholder="Product count">
+        <small id="total"></small>
+        <button id="Addbtn" type="button">Add Product</button>
+        <input type="text" onkeyup="searchData(this.value)" id="search" placeholder="Search by Product Name">
+      </div>
+    </form>
+    
+    <div id="deleteallbtn">
+    </div>
+    <br>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>product</th>
+        <th>price</th>
+        <th>count</th>
+        <th>Total Price</th>
+        <th colspan="2">Edit</th>
+      </tr>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>
