@@ -1,4 +1,4 @@
-
+window.alert("make sure that you are on desktop view") ;
 let proName = document.getElementById("proname");
 let proPrice = document.getElementById("proprice");
 let proCount = document.getElementById("procount");
